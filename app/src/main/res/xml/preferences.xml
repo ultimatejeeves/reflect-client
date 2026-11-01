@@ -929,6 +929,11 @@
             android:title="@string/title_checkbox_enable_perf_logging"
             app:iconSpaceReserved="false" />
         <Preference
+            android:key="share_capability_report"
+            android:title="@string/capability_report_title"
+            android:summary="@string/capability_report_summary"
+            app:iconSpaceReserved="false" />
+        <Preference
             android:key="share_performance_logs"
             android:summary="@string/summary_share_performance_logs"
             android:title="@string/title_share_performance_logs_button"

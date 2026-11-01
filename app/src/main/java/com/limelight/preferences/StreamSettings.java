@@ -739,6 +739,11 @@ public class StreamSettings extends AppCompatActivity {
                 }
             });
 
+            findPreference("share_capability_report").setOnPreferenceClickListener(preference -> {
+                com.limelight.diagnostics.CapabilityReportExport.share(requireActivity(), preference);
+                return true;
+            });
+
             Preference _pref;
             _pref = findPreference("import_keyboard_file");
             if (_pref != null) {

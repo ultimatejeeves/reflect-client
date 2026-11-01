@@ -2,6 +2,7 @@
 -dontobfuscate
 
 # Our code
+-keep class com.limelight.diagnostics.VulkanProbe { *; }
 -keep class com.limelight.binding.input.evdev.* {*;}
 
 # KeyMapper - keep all VK_* fields for reflection

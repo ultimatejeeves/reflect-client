@@ -224,6 +224,7 @@ public class NvConnection {
     
     private boolean startApp() throws XmlPullParserException, IOException
     {
+        com.limelight.nvstream.http.HostProtocolCapabilities.clearLastReport();
         NvHTTP h = new NvHTTP(context.serverAddress, context.httpsPort, uniqueId, context.serverCert, cryptoProvider);
 
         String serverInfo = h.getServerInfo(true);
@@ -246,6 +247,7 @@ public class NvConnection {
         }
 
         context.serverCodecModeSupport = (int)h.getServerCodecModeSupport(serverInfo);
+        h.getHostProtocolCapabilities(serverInfo).rememberForDiagnostics();
 
         context.negotiatedHdr = (context.streamConfig.getSupportedVideoFormats() & MoonBridge.VIDEO_FORMAT_MASK_10BIT) != 0;
         if ((context.serverCodecModeSupport & 0x20200) == 0 && context.negotiatedHdr) {

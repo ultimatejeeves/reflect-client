@@ -588,6 +588,15 @@ public class NvHTTP {
             return 0;
         }
     }
+
+    public HostProtocolCapabilities getHostProtocolCapabilities(String serverInfo)
+            throws XmlPullParserException, IOException {
+        java.util.Map<String, String> fields = new java.util.HashMap<>();
+        for (String name : HostProtocolCapabilities.OPTIONAL_FIELDS) {
+            fields.put(name, getXmlString(serverInfo, name, false));
+        }
+        return new HostProtocolCapabilities(getServerCodecModeSupport(serverInfo), fields);
+    }
     
     public long getMaxLumaPixelsHEVC(String serverInfo) throws XmlPullParserException, IOException {
         // MaxLumaPixelsHEVC wasn't present on old GFE versions
@@ -610,11 +619,7 @@ public class NvHTTP {
     public long getServerCodecModeSupport(String serverInfo) throws XmlPullParserException, IOException {
         // ServerCodecModeSupport wasn't present on old GFE versions
         String str = getXmlString(serverInfo, "ServerCodecModeSupport", false);
-        if (str != null) {
-            return Long.parseLong(str);
-        } else {
-            return 0;
-        }
+        return HostProtocolCapabilities.parseCodecMask(str);
     }
     
     public String getGpuType(String serverInfo) throws XmlPullParserException, IOException {

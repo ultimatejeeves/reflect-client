@@ -2,6 +2,19 @@
 
 Historical Apollo bootstrap document. Current direction: [Vibepollo migration](HOST_MIGRATION.md) and [Android parity](ANDROID_PARITY.md). Android decoder follow-up: [repair notes](DECODER_RECOVERY.md).
 
+## Android capability diagnostics and PyroWave spike (2026-11-01)
+
+- All four non-root debug ABI APKs build with the new dynamically loaded Vulkan diagnostics library.
+- **87 JVM tests pass**, zero failures/errors/skips. This includes 20 new capability/report/XML tests alongside the 67-test decoder-recovery baseline.
+- Lint: **0 errors, 458 warnings**, unchanged from the decoder-recovery baseline. API 21/22 guards are lint-checked; report fallback tests run on API 23/28/33 because installed Robolectric does not support API 21.
+- `artifacts/reflect-arm64-capability-diagnostics.apk`: all **six** native libraries pass 16 KiB ELF load alignment; SDK zipalign `-c -P 16 4` passes. The APK keeps the existing independent Reflect Dev ID.
+- Pinned PyroWave shared library and `pyrowave-device-validation` cross-compile for Android ARM64/API 26. Their ELF load segments have 16 KiB alignment. Dynamic dependencies are the packaged PyroWave library and Android system libraries; C++ is statically linked for this standalone probe.
+- Logs: `artifacts/android-capabilities-verification.log`, `artifacts/android-capabilities-alignment.json`, `artifacts/pyrowave-android-reproducible-build.log`.
+- No ADB devices connected. No APK installation, native GPU execution, live-host protocol verification, presentation test or Samsung performance measurement has occurred. The common-C pin and production codec negotiation are unchanged.
+- [Capability diagnostics, protocol audit and device handoff](ANDROID_CAPABILITIES.md) records remaining acceptance gates. PyroWave is not yet a working Android streaming codec.
+
+## Historical bootstrap results
+
 Recorded November 1, 2026 on Windows, RTX 5090, NVIDIA driver 621.01. This is development validation, not release or end-to-end performance certification.
 
 | Check | Result |

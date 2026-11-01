@@ -743,4 +743,8 @@
 
     <string name="title_checkbox_full_screen">Enable Full Screen</string>
     <string name="summary_checkbox_full_screen">Hide system bars with immersive mode</string>
+    <string name="capability_report_title">Share device capability report</string>
+    <string name="capability_report_summary">Check video decoders, display modes and GPU features. Creates a local report; choose where to share it.</string>
+    <string name="capability_report_collecting">Checking device capabilities…</string>
+    <string name="capability_report_failed">Could not create or share the capability report.</string>
 </resources>

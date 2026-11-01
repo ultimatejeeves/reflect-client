@@ -29,6 +29,8 @@ Every desktop capability receives a tracked Android outcome: implemented and dev
 
 ## Delivery order
 
+Foundation progress (2026-11-01): exportable codec/display/native Vulkan diagnostics and a conservative PyroWave feature assessment are implemented. Host advertisement parsing and the common-C/JNI compatibility audit are recorded in [Android capabilities](ANDROID_CAPABILITIES.md). The pinned PyroWave codec and native validation program compile for Android ARM64. Samsung runtime tests, core migration, framing and presentation are still pending; no PyroWave client capability is advertised.
+
 1. **Foundation:** adopt and build the host baseline; retain the tested Android decoder repair; audit capability/ABI differences; collect Samsung codec/display/Vulkan/input diagnostics. Establish HEVC/AV1 interoperability and trace identities.
 2. **Shared transport and PyroWave spike:** compile the pinned codec for ARM64, decode recorded frames offscreen, compare golden output, measure GPU time and memory. Then integrate framing/FEC, live presentation, calibration and safe fallback. Do not start by exposing a codec selector.
 3. **Presentation parity:** port source-paced policy and diagnostics, implement Android backend/feedback, calibrate both devices. Fixed-refresh behavior remains a first-class supported path.
