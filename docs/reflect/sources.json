@@ -2,10 +2,15 @@
   "recordedDate": "2026-11-01",
   "host": {
     "origin": "https://github.com/ultimatejeeves/reflect-host.git",
-    "upstream": "https://github.com/ClassicOldSong/Apollo.git",
+    "upstream": "https://github.com/Nonary/Vibepollo.git",
     "branch": "reflect/main",
-    "baseline": "adc5c5a0bd80831ce495434bb16aee2cd4175fb8",
-    "sunshineReference": "68f637a261abb2dd2f215e732d29a7de16de732a"
+    "baseline": "1ea3f02717b72de49799cbe06295ea82e236ed60",
+    "sunshineReference": "68f637a261abb2dd2f215e732d29a7de16de732a",
+    "apolloBaseline": "adc5c5a0bd80831ce495434bb16aee2cd4175fb8",
+    "previousReflectCommit": "f40d1a60dcc371b85384ed4819dde14dba48317b",
+    "preservedBranch": "baseline/reflect-apollo",
+    "upstreamBranch": "master",
+    "protocolRevision": "4ea115e8d23d1ca055a2aa8ddcfb601b705b3323"
   },
   "client": {
     "origin": "https://github.com/ultimatejeeves/reflect-client.git",
@@ -14,6 +19,14 @@
     "branch": "reflect/main",
     "baseline": "c5cf27f4dc822db0e863c4691e7a70c74bea977a",
     "originalSuppliedRevision": "42eb11ab",
-    "moonlightReference": "b48494cb96bff23d8886c4775cc4f39a1075495d"
+    "moonlightReference": "b48494cb96bff23d8886c4775cc4f39a1075495d",
+    "decoderRecoveryCommit": "2f846ea27f395eeb5a26c99c5a9db889366f95ad"
+  },
+  "desktopReference": {
+    "repository": "https://github.com/Nonary/moonlight-qt.git",
+    "revision": "76ee502543a2305afe06205644611975e3636737",
+    "protocolRevision": "3f9c009fe01db573cd29c1f286db5b7fa8a922fc",
+    "pyrowaveRevision": "186f0393b77f7755953b5ecde994bb1cec2e4155",
+    "role": "Android functional-parity reference; not an Android implementation"
   }
 }

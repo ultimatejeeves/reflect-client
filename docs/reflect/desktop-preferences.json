@@ -1,0 +1,441 @@
+{
+  "sourceRevision": "76ee502543a2305afe06205644611975e3636737",
+  "sourceFile": "app/settings/streamingpreferences.h",
+  "scope": "Every Q_PROPERTY in the desktop streaming preferences; protocol and backend features are tracked separately in ANDROID_PARITY.md.",
+  "preferences": [
+    {
+      "name": "width",
+      "type": "int",
+      "sourceLine": 164,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "height",
+      "type": "int",
+      "sourceLine": 165,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "fps",
+      "type": "int",
+      "sourceLine": 166,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "bitrateKbps",
+      "type": "int",
+      "sourceLine": 167,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "pyroWavePaceMbps",
+      "type": "int",
+      "sourceLine": 169,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "unlockBitrate",
+      "type": "bool",
+      "sourceLine": 170,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "autoAdjustBitrate",
+      "type": "bool",
+      "sourceLine": 171,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "enableVsync",
+      "type": "bool",
+      "sourceLine": 172,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "enableVrr",
+      "type": "bool",
+      "sourceLine": 173,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "vrrLatencyMode",
+      "type": "int",
+      "sourceLine": 174,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "vrrBufferPerMille",
+      "type": "int",
+      "sourceLine": 175,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "vrrTargetHundredths",
+      "type": "int",
+      "sourceLine": 176,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "vrrHistorySeconds",
+      "type": "int",
+      "sourceLine": 177,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "vrrToleranceUs",
+      "type": "int",
+      "sourceLine": 178,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "smoothVrrFrameTiming",
+      "type": "bool",
+      "sourceLine": 179,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "absorbVrrMicrostutter",
+      "type": "bool",
+      "sourceLine": 180,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "highPerformanceGpuPower",
+      "type": "bool",
+      "sourceLine": 181,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "traceVrrFrames",
+      "type": "bool",
+      "sourceLine": 182,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "exportingDiagnostics",
+      "type": "bool",
+      "sourceLine": 183,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "diagnosticsStatus",
+      "type": "QString",
+      "sourceLine": 184,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "gameOptimizations",
+      "type": "bool",
+      "sourceLine": 185,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "playAudioOnHost",
+      "type": "bool",
+      "sourceLine": 186,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "multiController",
+      "type": "bool",
+      "sourceLine": 187,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "enableMdns",
+      "type": "bool",
+      "sourceLine": 188,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "quitAppAfter",
+      "type": "bool",
+      "sourceLine": 189,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "absoluteMouseMode",
+      "type": "bool",
+      "sourceLine": 190,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "absoluteTouchMode",
+      "type": "bool",
+      "sourceLine": 191,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "framePacing",
+      "type": "bool",
+      "sourceLine": 192,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "connectionWarnings",
+      "type": "bool",
+      "sourceLine": 193,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "hideVrrBufferWarnings",
+      "type": "bool",
+      "sourceLine": 194,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "configurationWarnings",
+      "type": "bool",
+      "sourceLine": 195,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "richPresence",
+      "type": "bool",
+      "sourceLine": 196,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "gamepadMouse",
+      "type": "bool",
+      "sourceLine": 197,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "detectNetworkBlocking",
+      "type": "bool",
+      "sourceLine": 198,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "showPerformanceOverlay",
+      "type": "bool",
+      "sourceLine": 199,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "showFrametimeGraph",
+      "type": "bool",
+      "sourceLine": 200,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "audioConfig",
+      "type": "AudioConfig",
+      "sourceLine": 201,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "videoCodecConfig",
+      "type": "VideoCodecConfig",
+      "sourceLine": 202,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "enableHdr",
+      "type": "bool",
+      "sourceLine": 203,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "enableYUV444",
+      "type": "bool",
+      "sourceLine": 204,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "videoDecoderSelection",
+      "type": "VideoDecoderSelection",
+      "sourceLine": 205,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "rendererSelection",
+      "type": "RendererSelection",
+      "sourceLine": 206,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "windowMode",
+      "type": "WindowMode",
+      "sourceLine": 207,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "recommendedFullScreenMode",
+      "type": "WindowMode",
+      "sourceLine": 208,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "uiDisplayMode",
+      "type": "UIDisplayMode",
+      "sourceLine": 209,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "swapMouseButtons",
+      "type": "bool",
+      "sourceLine": 210,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "muteOnFocusLoss",
+      "type": "bool",
+      "sourceLine": 211,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "backgroundGamepad",
+      "type": "bool",
+      "sourceLine": 212,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "reverseScrollDirection",
+      "type": "bool",
+      "sourceLine": 213,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "swapFaceButtons",
+      "type": "bool",
+      "sourceLine": 214,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "keepAwake",
+      "type": "bool",
+      "sourceLine": 215,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "captureSysKeysMode",
+      "type": "CaptureSysKeysMode",
+      "sourceLine": 216,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerDriver",
+      "type": "bool",
+      "sourceLine": 217,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerMotion",
+      "type": "bool",
+      "sourceLine": 218,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerSplitPads",
+      "type": "bool",
+      "sourceLine": 219,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerGrips",
+      "type": "SteamControllerGrips",
+      "sourceLine": 220,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerRumbleHold",
+      "type": "int",
+      "sourceLine": 221,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerStickStretch",
+      "type": "bool",
+      "sourceLine": 222,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerHapticBoost",
+      "type": "int",
+      "sourceLine": 223,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerHapticPulseScale",
+      "type": "int",
+      "sourceLine": 224,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "steamControllerHapticMasterGain",
+      "type": "int",
+      "sourceLine": 225,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    },
+    {
+      "name": "language",
+      "type": "Language",
+      "sourceLine": 226,
+      "status": "audit_pending",
+      "androidEquivalent": null
+    }
+  ]
+}

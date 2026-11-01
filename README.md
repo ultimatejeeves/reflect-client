@@ -1,6 +1,6 @@
 # Reflect Android (development fork)
 
-Based on maintained Artemis at ClassicOldSong/moonlight-android, branch moonlight-noir. Initial targets: Galaxy S23 Ultra and Galaxy Tab S9+, with an NVIDIA-first Reflect Host. Development APKs use the independent ID io.github.ultimatejeeves.reflect.debug.
+Based on maintained Artemis at ClassicOldSong/moonlight-android, branch moonlight-noir. Initial targets: Galaxy S23 Ultra and Galaxy Tab S9+, with a Vibepollo-based Reflect Host. The approved objective is functional parity with Nonary's desktop client; see [the parity plan](docs/reflect/ANDROID_PARITY.md). Development APKs use the independent ID io.github.ultimatejeeves.reflect.debug.
 
 Start with [the review](docs/reflect/REVIEW.md), [roadmap](docs/reflect/ROADMAP.md), and [validation results](docs/reflect/VALIDATION.md). Host and workspace setup: https://github.com/ultimatejeeves/reflect-host. These review documents capture the initial shared baseline; keep component findings current alongside changes.
 

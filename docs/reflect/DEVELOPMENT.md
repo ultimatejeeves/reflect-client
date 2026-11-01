@@ -1,6 +1,6 @@
 # Reflect development setup
 
-Workspace: `D:\Projects\Systems\Reflect Streamer`. Open `Reflect.code-workspace`. Component Git histories remain separate. Use `origin` for Reflect and `upstream` for the maintained ClassicOldSong projects; `supplied` retains the originally linked client remote. `sunshine` and `moonlight` are reference remotes for selective backports.
+Workspace: `D:\Projects\Systems\Reflect Streamer`. Open `Reflect.code-workspace`. Component Git histories remain separate. Use `origin` for Reflect and `upstream` for Nonary/Vibepollo on the host and maintained ClassicOldSong Artemis on Android; `supplied` retains the originally linked client remote. `sunshine` and `moonlight` are reference remotes for selective backports.
 
 ## Toolchain
 
@@ -35,9 +35,9 @@ The R: alias is visible in Explorer while present. It maps this exact folder and
 
 Android APKs: `repos/artemis/app/build/outputs/apk/nonRoot_game/debug/`. Use the ARM64 build for both Samsung targets. Build logs and saved APKs under `artifacts` are local-only. No APK has been installed on either target by this setup.
 
-Host executable: `repos/apollo/build/sunshine.exe` when compilation succeeds. The binary still uses the inherited executable name. Do not install it over the active Apollo service during development. Tests that enumerate or change audio/display/input devices need separate selection from pure unit tests.
+Host executable: `repos/apollo/build/vibepollo/sunshine.exe` when compilation succeeds. The binary still uses the inherited executable name. Do not install it over the active Apollo service during development. Tests that enumerate or change audio/display/input devices need separate selection from pure unit tests.
 
-The host web interface builds with `npm ci` and `npm run build` in its checkout. `npm audit --omit=dev` checks the production graph; the complete audit also includes the local HTTP fixture server. Never use `npm audit fix --force` without reviewing API and major-version changes.
+The Vibepollo web interface builds from `src_assets/common/assets/web` and `web-legacy`; CMake manages both locked builds. `npm audit --omit=dev` checks the production graph; the complete audit also includes the local HTTP fixture server. Never use `npm audit fix --force` without reviewing API and major-version changes.
 
 ## Fork maintenance
 
@@ -46,3 +46,9 @@ Create a feature branch from `reflect/main`; keep implementation, regression tes
 The original supplied client branch is a comparison baseline only. GitHub may display the original fork-parent relationship because the fork was created before switching to maintained Artemis; the actual source ancestry and configured upstream now use ClassicOldSong's maintained branch.
 
 Public release preparation still requires signing, production branding, package/service identity separation, driver redistribution review, hardware streaming tests and release smoke tests. A successful compile is not a release certification.
+
+## Current baseline
+
+See HOST_MIGRATION.md and ANDROID_PARITY.md. Older verification counts in this workspace apply to the Apollo bootstrap, not the Vibepollo migration. New native builds use `build/vibepollo`.
+
+The Vibepollo host builds from the physical workspace path and does not need the R: alias. Build-Host.ps1 -Tests builds the host and four selected pure test targets; Test-Host.ps1 runs them. A full native/test/packaging build remains a separate qualification task.

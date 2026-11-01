@@ -1,5 +1,7 @@
 # Reflect development roadmap
 
+Historical Apollo bootstrap document. Current direction: [Vibepollo migration](HOST_MIGRATION.md) and [Android parity](ANDROID_PARITY.md). Android decoder follow-up: [repair notes](DECODER_RECOVERY.md).
+
 Build reliability and decoder correctness come first. The initial platform is Windows with RTX 5090, streaming to Galaxy S23 Ultra and Galaxy Tab S9+. Existing AMD/Intel and non-Windows code remains supported in source; expanding hardware validation follows the NVIDIA/Samsung baseline.
 
 ## Milestone 1 Establish a trustworthy baseline

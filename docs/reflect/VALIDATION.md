@@ -1,5 +1,7 @@
 # Reflect bootstrap validation
 
+Historical Apollo bootstrap document. Current direction: [Vibepollo migration](HOST_MIGRATION.md) and [Android parity](ANDROID_PARITY.md). Android decoder follow-up: [repair notes](DECODER_RECOVERY.md).
+
 Recorded November 1, 2026 on Windows, RTX 5090, NVIDIA driver 621.01. This is development validation, not release or end-to-end performance certification.
 
 | Check | Result |

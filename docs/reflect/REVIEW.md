@@ -1,5 +1,7 @@
 # Reflect codebase review
 
+Historical Apollo bootstrap document. Current direction: [Vibepollo migration](HOST_MIGRATION.md) and [Android parity](ANDROID_PARITY.md). Android decoder follow-up: [repair notes](DECODER_RECOVERY.md).
+
 Review date: November 1, 2026. Source revisions are pinned in `sources.json`. The main conclusion is that the inherited capture and transport foundations are substantial, but build regressions, decoder correctness, input validation, and trustworthy measurements should be addressed before aggressive encoder tuning.
 
 This is a broad architecture and risk review with focused source inspection and executable build/test checks. It is not a claim that every line or vendored dependency has been audited. End-to-end streaming, thermal behavior, HDR accuracy, and device recovery still require the two Samsung clients. Findings below distinguish verified failures, source-level defects, and experiments.
