@@ -1210,7 +1210,8 @@ public class MediaCodecDecoderRenderer extends VideoDecoderRenderer implements C
                 long lastOutputNs = System.nanoTime();
                 while (!stopping) {
                     /* LATEST_ONLY_LOW_LATENCY */
-                    if (!preferLowerDelays) {
+                    // Balanced pacing must hand frames to the Choreographer queue.
+                    if (!preferLowerDelays && prefs.framePacing != PreferenceConfiguration.FRAME_PACING_BALANCED) {
                         try {
                             android.media.MediaCodec.BufferInfo __tmpInfo = new android.media.MediaCodec.BufferInfo();
                             int __idx = videoDecoder.dequeueOutputBuffer(__tmpInfo, 0);
@@ -1283,7 +1284,9 @@ public class MediaCodecDecoderRenderer extends VideoDecoderRenderer implements C
                             // Render the latest frame now if frame pacing isn't in balanced mode
                             if (prefs.framePacing != PreferenceConfiguration.FRAME_PACING_BALANCED) {
                                 // Get the last output buffer in the queue
-                                while ((outIndex = videoDecoder.dequeueOutputBuffer(info, getOutputDequeueTimeoutUs())) >= 0) {
+                                // A frame is already ready. Only drain buffers available now;
+                                // waiting here delays presentation and can chase future frames.
+                                while ((outIndex = videoDecoder.dequeueOutputBuffer(info, 0)) >= 0) {
                                     videoDecoder.releaseOutputBuffer(lastIndex, false);
                                     frameDropped = true; // we're discarding the oldest one
 

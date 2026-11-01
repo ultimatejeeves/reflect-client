@@ -1,0 +1,32 @@
+name: Reflect Android
+on:
+  pull_request:
+    branches: [reflect/main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Install pinned Android packages
+        run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0' 'ndk;27.0.12077973'
+      - name: Build and verify
+        run: bash gradlew :app:assembleNonRoot_gameDebug :app:testNonRoot_gameDebugUnitTest :app:lintNonRoot_gameDebug --console=plain
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reflect-android-development
+          path: |
+            app/build/outputs/apk/nonRoot_game/debug/*.apk
+            app/build/reports/tests/
+            app/build/reports/lint-results-*
