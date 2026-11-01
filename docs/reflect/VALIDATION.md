@@ -4,6 +4,8 @@ Historical Apollo bootstrap document. Current direction: [Vibepollo migration](H
 
 ## Android capability diagnostics and PyroWave spike (2026-11-01)
 
+Follow-up: an SM-S928U phone is now connected, Reflect Dev installed and capability export exercised. Five standalone PyroWave compute-decode cases pass against desktop golden output; the fragment-path comparison fails and mobile encoder creation is unsupported. This supersedes the no-device status below for that phone only. See [device validation](DEVICE_VALIDATION.md).
+
 - All four non-root debug ABI APKs build with the new dynamically loaded Vulkan diagnostics library.
 - **87 JVM tests pass**, zero failures/errors/skips. This includes 20 new capability/report/XML tests alongside the 67-test decoder-recovery baseline.
 - Lint: **0 errors, 458 warnings**, unchanged from the decoder-recovery baseline. API 21/22 guards are lint-checked; report fallback tests run on API 23/28/33 because installed Robolectric does not support API 21.

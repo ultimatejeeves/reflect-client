@@ -2,6 +2,8 @@
 
 Status: 2026-11-01. Target devices are Galaxy S23 Ultra and Galaxy Tab S9+. Neither has been connected to ADB during this implementation, so no device capability or performance claim is established yet.
 
+Subsequent device session: the connected phone identifies as Galaxy S24 Ultra (SM-S928U). Its capability export and five offscreen PyroWave compute-decoder cases now pass; the preferred fragment path fails pixel comparison. See [device validation](DEVICE_VALIDATION.md) for exact scope and results. The original implementation-time status above is historical.
+
 ## Implemented
 
 Reflect settings has **Share device capability report** in the performance category. Collection runs on a worker thread and sharing uses the existing FileProvider. The report stays in the app cache until the user selects a share destination. It contains no serial, host address/name, pairing material, SSID, or account data. Device model, Android build/security patch, codec names and GPU driver identifiers are included deliberately for reproducibility.

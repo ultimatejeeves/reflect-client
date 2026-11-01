@@ -29,6 +29,8 @@ Every desktop capability receives a tracked Android outcome: implemented and dev
 
 ## Delivery order
 
+Device progress: [SM-S928U validation](DEVICE_VALIDATION.md) now establishes offscreen GPU compute decoding of PC-generated PyroWave fixtures at 1080p and 3120×1440 in 8-bit 4:2:0/4:4:4. The default mobile fragment path fails reference comparison and remains unqualified. Live transport and Surface integration are still missing.
+
 Foundation progress (2026-11-01): exportable codec/display/native Vulkan diagnostics and a conservative PyroWave feature assessment are implemented. Host advertisement parsing and the common-C/JNI compatibility audit are recorded in [Android capabilities](ANDROID_CAPABILITIES.md). The pinned PyroWave codec and native validation program compile for Android ARM64. Samsung runtime tests, core migration, framing and presentation are still pending; no PyroWave client capability is advertised.
 
 1. **Foundation:** adopt and build the host baseline; retain the tested Android decoder repair; audit capability/ABI differences; collect Samsung codec/display/Vulkan/input diagnostics. Establish HEVC/AV1 interoperability and trace identities.
